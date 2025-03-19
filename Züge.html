@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Züge, Trams und vieles mehr</title>
-    <link rel="icon" href="zug-Photoroom.png"/>
+    <link rel="icon" href="zug-Photoroom_flip.png"/>
     <style> 
       .zugdiv {
         position: relative;
@@ -12,22 +12,19 @@
         animation-duration: 10s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-direction: reverse;
+        
 
              }
       
       @keyframes example {
-        0%  {left: -20%; top:0px;}
-        100%{left: 120%; top:0px;}
+        from  {left: -30%;      top:0px;}
+        to    {left: 110%;      top:0px;}
       }
-      .zughintegrund {
 
-        width: right;
-        height: 100px;
-        position: absolute;
-        top:   0px;
-        right: 0px;
-        background-color: rgb(4, 0, 255);
+      .zughintegrund{
+      position: absolute;
+      top: 0px;
+      left: 0px;
 
       }
 
@@ -36,14 +33,22 @@
 
 </head>
 <body>  
-
+  
   <div class="zugdiv">
-    <img src ="zug-Photoroom.png"">
+    <img src ="zug-Photoroom_flip.png" style="height: 200px;"/>
   </div>
 
   <div class="zughintegrund">
 
+    <img src="Wald-removebg-preview.png"/>
+
   </div>
+
+
+
+  <h1>
+    Das ist eine Zuganimation
+  </h1>
 
   
     
