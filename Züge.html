@@ -7,24 +7,44 @@
     <link rel="icon" href="zug-Photoroom_flip.png"/>
     <style> 
       .zugdiv {
-        position: relative;
+        position: absolute;
         animation-name: example;
         animation-duration: 10s;
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation-timing-function: ease-in;
+
         
 
              }
       
       @keyframes example {
-        from  {left: -30%;      top:0px;}
-        to    {left: 110%;      top:0px;}
+        from  {left: -20%;      bottom:0px;}
+        to    {left: 120%;      bottom:0px;}
       }
 
       .zughintegrund{
-      position: absolute;
+      position:static;
       top: 0px;
       left: 0px;
+      z-index: 1;
+
+      }
+
+      .position{
+        position: relative;
+        display: flex;
+        overflow: hidden;
+
+      }
+
+      .boden{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 10px;
+        background-color: black;
 
       }
 
@@ -33,16 +53,30 @@
 
 </head>
 <body>  
+
+  <div class = "position">
+
+    <div class="zughintegrund">
   
-  <div class="zugdiv">
-    <img src ="zug-Photoroom_flip.png" style="height: 200px;"/>
+      <img src="Wald-removebg-preview.png"/>
+  
+    </div>
+
+    <div class="zugdiv">
+
+      <img src ="zug-Photoroom_flip.png" style="height: 200px;"/>
+    
+    </div>
+
+    <div class="boden">
+
+    </div>
+  
+   
+
   </div>
+  
 
-  <div class="zughintegrund">
-
-    <img src="Wald-removebg-preview.png"/>
-
-  </div>
 
 
 
