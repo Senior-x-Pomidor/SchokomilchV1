@@ -1,46 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-<style> 
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  position: relative;
-  animation-name: example;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Züge, Trams und vieles mehr</title>
+    <link rel="icon" href="zug-Photoroom_flip.png"/>
+    <style> 
+      .zugdiv {
+        position: absolute;
+        animation-name: example;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
 
-@keyframes example {
-  0%   {background-color:red; left:0%; top:0px;}
-  100% {background-color:red; left:90%; top:0px;}
-}
-      .zughintegrund {
+        
 
-        width: right;
-        height: 100px;
-        position: relative;
-        top:   0px;
-        right: 0px;
-        background-color: rgb(160, 158, 233);
+             }
+      
+      @keyframes example {
+        from  {left: -20%;      bottom:0px;}
+        to    {left: 120%;      bottom:0px;}
+      }
+
+      .zughintegrund{
+      position:static;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
 
       }
-</style>
+
+      .position{
+        position: relative;
+        display: flex;
+        overflow: hidden;
+
+      }
+
+      .boden{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 10px;
+        background-color: black;
+
+      }
+
+    </style>
+      
+
 </head>
-<body>
+<body>  
 
-<h1>CSS Animation</h1>
+  <div class = "position">
 
-<p>This example uses six of the animation properties:</p>
+    <div class="zughintegrund">
+  
+      <img src="Wald-removebg-preview.png"/>
+  
+    </div>
 
-<div></div>
-<div class="zughintegrund">
+    <div class="zugdiv">
 
-</div>
+      <img src ="zug-Photoroom_flip.png" style="height: 200px;"/>
+    
+    </div>
 
-</body>
-</html>
+    <div class="boden">
+
+    </div>
+  
+   
+
+  </div>
+  
